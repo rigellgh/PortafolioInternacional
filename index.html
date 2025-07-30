@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Global - Rigel A. Ladrón de Guevara H.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0a192f; /* Azul marino oscuro */
+            --secondary: #64ffda; /* Verde-azul brillante */
+            --light: #ccd6f6; /* Gris claro */
+            --dark: #020c1b; /* Azul casi negro */
+        }
+
+        body {
+            font-family: 'Calibre', 'San Francisco', sans-serif;
+            background: 
+                linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.9)),
+                url('https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80') no-repeat center/cover fixed;
+            color: var(--light);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Estilo de la "terminal" */
+        .terminal {
+            max-width: 800px;
+            margin: 5rem auto;
+            background: rgba(10, 25, 47, 0.85);
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(2, 12, 27, 0.7);
+            border: 1px solid rgba(100, 255, 218, 0.2);
+            overflow: hidden;
+        }
+
+        .terminal-header {
+            background: var(--dark);
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+        }
+
+        .terminal-btn {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 6px;
+        }
+
+        .terminal-body {
+            padding: 2rem;
+        }
+
+        /* Estilo de los comandos */
+        .command {
+            margin-bottom: 2rem;
+        }
+
+        .prompt {
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .prompt span {
+            color: var(--light);
+            margin-left: 10px;
+        }
+
+        .output {
+            padding-left: 1.5rem;
+            border-left: 2px solid var(--secondary);
+            margin-left: 10px;
+        }
+
+        /* Sección de proyectos */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .project-card {
+            background: rgba(100, 255, 218, 0.05);
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            border-radius: 5px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--secondary);
+        }
+
+        /* Efectos especiales */
+        .typewriter {
+            border-right: 2px solid var(--secondary);
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            from, to { border-color: transparent }
+            50% { border-color: var(--secondary) }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .terminal {
+                margin: 2rem 1rem;
+            }
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="terminal-btn" style="background: #ff5f56;"></div>
+            <div class="terminal-btn" style="background: #ffbd2e;"></div>
+            <div class="terminal-btn" style="background: #27c93f;"></div>
+        </div>
+        
+        <div class="terminal-body">
+            <!-- Sección About -->
+            <div class="command">
+                <div class="prompt">
+                    <span>~/portafolio</span> <i class="fas fa-angle-right"></i> <span>about</span>
+                </div>
+                <div class="output">
+                    <h1>Rigel A. Ladrón de Guevara H.</h1>
+                    <h2>Internacionalista | Ingeniera en Formación</h2>
+                    <p>Especializada en desarrollo web con enfoque global. Combinando conocimientos internacionales con tecnología para crear soluciones sin fronteras.</p>
+                </div>
+            </div>
+
+            <!-- Sección Proyectos -->
+            <div class="command">
+                <div class="prompt">
+                    <span>~/portafolio</span> <i class="fas fa-angle-right"></i> <span>projects</span>
+                </div>
+                <div class="output">
+                    <div class="project-grid">
+                        <!-- Proyecto 1 -->
+                        <div class="project-card">
+                            <h3><i class="fas fa-language"></i> Herramientas para Traductores</h3>
+                            <p>Plataforma con recursos para profesionales de la traducción.</p>
+                            <a href="https://www.rigelglobalbusinesslanguages.com/herramientas" target="_blank" style="color: var(--secondary);">Ver proyecto →</a>
+                        </div>
+                        
+                        <!-- Proyecto 2 -->
+                        <div class="project-card">
+                            <h3><i class="fas fa-globe-americas"></i> Portafolio Global</h3>
+                            <p>Mi experiencia internacional en formato digital.</p>
+                            <a href="https://sites.google.com/view/rigel-ladrn-de-guevara-hportfo/trabajo" target="_blank" style="color: var(--secondary);">Ver proyecto →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección Contacto -->
+            <div class="command">
+                <div class="prompt">
+                    <span>~/portafolio</span> <i class="fas fa-angle-right"></i> <span>contact</span>
+                </div>
+                <div class="output">
+                    <p>Conéctate conmigo a través de:</p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><i class="fas fa-envelope"></i> rigelwebwangzhan@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Caracas, Venezuela</li>
+                    </ul>
+                    <div style="margin-top: 1rem;">
+                        <a href="https://github.com/rigellgh" target="_blank" style="color: var(--secondary); margin-right: 1rem;"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="wa.me/584241623533" style="color: var(--secondary);"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comando interactivo -->
+            <div class="command">
+                <div class="prompt">
+                    <span>~/portafolio</span> <i class="fas fa-angle-right"></i> <span id="typing-text" class="typewriter"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Efecto de máquina de escribir
+        const texts = ["Bienvenido a mi portafolio global", "Explore my international projects", "欢迎来到我的全球组合"];
+        let count = 0;
+        let index = 0;
+        let currentText = "";
+        let letter = "";
+
+        (function type() {
+            if (count === texts.length) {
+                count = 0;
+            }
+            currentText = texts[count];
+            letter = currentText.slice(0, ++index);
+            
+            document.getElementById("typing-text").textContent = letter;
+            if (letter.length === currentText.length) {
+                count++;
+                index = 0;
+                setTimeout(type, 2000);
+            } else {
+                setTimeout(type, 100);
+            }
+        })();
+    </script>
+</body>
+</html>
